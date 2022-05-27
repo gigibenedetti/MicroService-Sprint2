@@ -1,7 +1,7 @@
 package com.fiap.falcon.scania.FalconScania.controllers;
 
 
-
+import java.util.List;
 import java.util.Optional;
 
 import javax.validation.Valid;
@@ -34,7 +34,7 @@ public class NotificarController {
 		return modelView;
 	}	
 	
-	@GetMapping("/relatorio")
+	@GetMapping("/relatorioFurto")
 	public ModelAndView listarIncidentes() {
 		ModelAndView model = new ModelAndView("dashboard/relatorio");
 
