@@ -1,0 +1,38 @@
+<nav th:fragment="nav" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand mt-2 mt-lg-0" href="/">
+            <img src="https://www.scania.com/content/dam/scanianoe/market/master/homepage/scania-wordmark.svg" height="15" alt="Scania Logo" loading="lazy"/>
+            </a>
+            <div class="d-flex order-sm-1 ms-auto pe-2">
+                <ul class="navbar-nav flex-row">
+                    <li class="nav-item mx-2">
+                        <a href="" data-bs-toggle="dropdown" class="nav-link dropdown-toggle" id="iconToggle">
+                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="25" alt="user" loading="lazy"/>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-light" aria-labelledby="navbarDropdownMenuLink2">
+                            <li><a class="dropdown-item ms-auto" href="/login">Entrar</a></li>
+                            <li><a class="dropdown-item ms-auto" href="/register">Registrar</a></li>
+                            <li><a class="dropdown-item ms-auto" href="/login">Desconectar</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link active" href="/cadastrarVeiculo">Cadastrar Veículo/Peça</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/notificarFurto">Notificar Furto</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/relatorio">Relatório</a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </nav>

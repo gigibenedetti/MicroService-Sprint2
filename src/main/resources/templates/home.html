@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>      
+       <nav th:replace="~{static/menuLogado :: nav}"></nav>
+
+        <div class="container d-flex justify-content-center pt-5">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col text-center my-auto">
+                    <div class="card-body align-items-center d-flex justify-content-center d-flex px-5 py-5 border">
+            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="200" width="200" alt="user" loading="lazy"/>
+            <div class="pl-5">
+                <h3>Olá, <span th:text="${nomeUsuario}">username!</span>!</h3>
+            </div>               
+                    </div>
+                    
+                </div>
+                
+                <section class="pt-5 pb-5">
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-6">
+                              <h3 class="mb-3">Selecione seu Caminhão: </h3>
+                          </div>
+                          <div class="col-6 text-right">
+                              <a class="btn btn-light mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                                  <i class="fa fa-caret-left" style="font-size:24px"></i>
+                              </a>
+                              <a class="btn btn-light mb-3" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                                  <i class="fa fa-caret-right" style="font-size:24px"></i>
+                              </a>
+                          </div>
+                          <div class="col-12">
+                              <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                  
+                                  <div class="carousel-inner">
+                                      <div class="carousel-item active">
+                                          <div class="row">
+                  
+                                              <div class="col-md-4 mb-3">
+                                                  <div class="card">
+                                                      <img class="img-fluid" alt="100%x280" src="https://www.scania.com/content/www/br/pt/home/products/trucks/p-series/_jcr_content/image.img.90.360.jpeg/1626783712759.jpeg">
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">Linha P</h4>
+                                                          <p class="card-text">A linha P da Scania é nossa linha de cabines mais versátil, ideal para operações urbanas e regionais e aprovada em construção e outras condições exigentes.</p>
+                  
+                                                      </div>
+                  
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 mb-3">
+                                                  <div class="card">
+                                                      <img class="img-fluid" alt="100%x280" src="https://www.scania.com/content/www/br/pt/home/products/trucks/g-series/_jcr_content/image.img.90.360.jpeg/1626783712759.jpeg">
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">Linha G</h4>
+                                                          <p class="card-text">A linha G da Scania traz a infalível combinação de conforto e elegância por dentro e por fora. Oferecendo opções de armazenamento exclusivas, bem como uma cabine espaçosa.</p>
+                  
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 mb-3">
+                                                  <div class="card">
+                                                      <img class="img-fluid" alt="100%x280" src="https://www.scania.com/content/www/br/pt/home/products/trucks/r-series/_jcr_content/image.img.90.360.jpeg/1626783712759.jpeg">
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">Linha R</h4>
+                                                          <p class="card-text">Não há como negar – a elegante cabine está mais resistente e eficaz do que nunca. Prepare-se para virar cabeças com a carroceria atlética que redefine o conceito de "premium" em caminhões de longa distância.</p>
+                  
+                                                      </div>
+                                                  </div>
+                                              </div>
+                  
+                                          </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                          <div class="row">
+                  
+                                              <div class="col-md-4 mb-3">
+                                                  <div class="card">
+                                                      <img class="img-fluid" alt="100%x280" src="https://www.scania.com/content/www/br/pt/home/products/trucks/s-series/_jcr_content/image.img.90.360.jpeg/1626783712759.jpeg">
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">Linha S</h4>
+                                                          <p class="card-text">A linha S cria uma nova referência de conforto para o motorista de longa distância. Descubra um interior que é um paraíso de luxo, com um piso plano e instalações de armazenamento estendido, projetado para uma área espaçosa.</p>
+                  
+                                                      </div>
+                  
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 mb-3">
+                                                  <div class="card">
+                                                      <img class="img-fluid" alt="100%x280" src="https://www.scania.com/content/www/br/pt/home/products/trucks/v8/_jcr_content/image.img.90.360.jpeg/1626783712759.jpeg">
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">V8</h4>
+                                                          <p class="card-text">O novo trem de força Scania V8 inicia uma incrível experiência de condução. Quando combinado com a nova caixa de câmbio Scania Opticruise, é possível obter uma economia de combustível de até 6%.</p>
+                  
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4 mb-3">
+                                                  <div class="card">
+                                                      <img class="img-fluid" alt="100%x280" src="https://www.scania.com/content/www/br/pt/home/products/trucks/xt/_jcr_content/image.img.90.360.jpeg/1626783712759.jpeg">
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">XT</h4>
+                                                          <p class="card-text">A linha XT da Scania foi criada para resistir a condições variadas e ambientes desafiadores, de modo que você realize uma operação lucrativa.</p>
+                  
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="carousel-item">
+                                          <div class="row">
+                  
+                                              <div class="col-md-4 mb-3">
+                                                  <div class="card">
+                                                      <img class="img-fluid" alt="100%x280" src="https://www.scania.com/content/www/br/pt/home/products/trucks/gas-truck/_jcr_content/image.img.90.360.jpeg/1626783712759.jpeg">
+                                                      <div class="card-body">
+                                                          <h4 class="card-title">Caminhão a Gás</h4>
+                                                          <p class="card-text">A linha de veículos a gás da Scania está disponível nas versões CNG e LNG para tratores e aplicações rígidas. Com uma ampla seleção de configurações, você pode personalizar seu caminhão.</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  </section>
+        </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

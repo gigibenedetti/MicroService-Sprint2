@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="js/map.js"></script>
+
+    <title>Relatório</title>
+</head>
+<body>
+    <nav th:replace="~{static/menuLogado :: nav}"></nav>
+        <div class="container-fluid mt-5 mb-5">
+        <div class="row d-flex align-items-center justify-content-center">
+            <main class="">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="#">Principal</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Detalhes</li>
+                    </ol>
+                  </nav>
+                  <h1 class="h2">Relatório</h1>
+                  <p>Essa é uma página para uma macro visualização dos furtos relacionados aos veículos da Scania.</p>
+                  <div class="row my-4">
+                    <div class="col-12 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">Incidentes</h5>
+                            <div class="card-body">
+                              <h5 class="card-title">125k</h5>
+                              <p class="card-text">Março 2022 - Maio 2022, Brasil</p>
+                              <p class="card-text text-danger">18.2% de aumento desde o mês passado.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                        <div class="card">
+                            <h5 class="card-header">Peças Visadas</h5>
+                            <div class="card-body">
+                              <h5 class="card-title">18k</h5>
+                              <p class="card-text">Janeiro 2020 - Janeiro 2022, Brasil</p>
+                              <p class="card-text text-success">Número de peças cadastradas em nosso sistema.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                        <div class="card">
+                            <h5 class="card-header">Peças Vítimas</h5>
+                            <div class="card-body">
+                              <h5 class="card-title">Câmbio</h5>
+                              <p class="card-text">200k     Janeiro 2020 - Janeiro 2022, Brasil</p>
+                              <p class="card-text text-danger">Número de peças mais furtadas de acordo com os registros em nosso sistema.</p>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-4 mb-lg-0 col-lg-3">
+                        <div class="card">
+                            <h5 class="card-header">Rotas Perigosas</h5>
+                            <div class="card-body">
+                              <h5 class="card-title">São Paulo</h5>
+                              <p class="card-text">45% Janeiro 2020 - Janeiro 2022, Brasil</p>
+                              <p class="card-text text-danger">Rota com o maior índice de roubo.</p>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 col-xl-8 mb-4 mb-lg-0">
+                        <div class="card">
+                            <h5 class="card-header">Últimos Incidentes</h5>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">Número</th>
+                                            <th scope="col">Peça Furtada</th>
+                                            <th scope="col">Caminhão Vítima</th>
+                                            <th scope="col">Local do Furto</th>
+                                            <th scope="col">Data</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">17376</th>
+                                            <td>Câmbio</td>
+                                            <td>Linha P</td>
+                                            <td>Belém, Brasil</td>
+                                            <td>Agosto 31 2020</td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Detalhes</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Editar</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Deletar</a></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">17375</th>
+                                            <td>Cabines de Caminhão</td>
+                                            <td>Linha S</td>
+                                            <td>Brasília, Brasil</td>
+                                            <td>Agosto 28 2020</td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Detalhes</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Editar</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Deletar</a></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">17374</th>
+                                            <td>Cabines de Caminhão</td>
+                                            <td>Linha R</td>
+                                            <td>Fortaleza, Brasil</td>
+                                            <td>Agosto 15 2020</td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Detalhes</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Editar</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Deletar</a></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">17373</th>
+                                            <td>Câmbio</td>
+                                            <td>Linha P</td>
+                                            <td>Goiânia, Brasil</td>
+                                            <td>Agosto 10 2020</td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Detalhes</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Editar</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Deletar</a></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">17372</th>
+                                            <td>Câmbio</td>
+                                            <td>Linha P</td>
+                                            <td>Brasília, Brasil</td>
+                                            <td>Agosto 09 2020</td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Detalhes</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Editar</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Deletar</a></td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">17371</th>
+                                            <td>Câmbio</td>
+                                            <td>Linha G</td>
+                                            <td>Brasília, Brasil</td>
+                                            <td>Agosto 01 2020</td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Detalhes</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Editar</a></td>
+                                            <td><a href="#" class="btn btn-sm btn-primary">Deletar</a></td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                </div>
+                                  <a href="#" class="btn btn-block btn-light">Visualizar Tudo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xl-4">                          
+                        <div class="card">
+                            <h5 class="card-header">Local Atual</h5>
+                            <div class="card-body">
+                                <div >
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117011.2326744166!2d-46.660218072477264!3d-23.582768797430465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1653610479042!5m2!1spt-BR!2sbr" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <footer class="pt-5 d-flex justify-content-between">
+                    <span>Copyright © 2022-2024 <a href="">Falcon</a></span>
+                    <ul class="nav m-0">
+                        <li class="nav-item">
+                          <a class="nav-link text-secondary" aria-current="page" href="#">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-secondary" href="#">Terms and conditions</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link text-secondary" href="#">Contact</a>
+                        </li>
+                      </ul>
+                  </footer>
+            </main>
+        </div>
+      </div>
+
+      
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
