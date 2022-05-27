@@ -34,6 +34,16 @@ public class NotificarController {
 		return modelView;
 	}	
 	
+	@GetMapping("/relatorio")
+	public ModelAndView listarIncidentes() {
+		ModelAndView model = new ModelAndView("dashboard/relatorio");
+
+		List<NotificacaoFurto> listarIncidentes = notificarRepository.findAll();
+		model.addObject("listarIncidentes", listarIncidentes);
+
+		return model;
+	}
+	
 	@PostMapping("/notificarFurto")
 	public ModelAndView salvar(@Valid NotificacaoFurtoDto notificar, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
