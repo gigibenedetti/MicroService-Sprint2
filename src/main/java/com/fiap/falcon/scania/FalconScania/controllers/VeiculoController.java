@@ -32,7 +32,7 @@ public class VeiculoController {
 		return modelView;
 	}
 	
-	@PostMapping("/relatorio")
+	@PostMapping("/cadastrarVeiculo")
 	public ModelAndView salvar(@Valid VeiculoDto veiculo, BindingResult bindingResult) {
 		if (bindingResult.hasErrors()) {
 			return new ModelAndView("veiculo/cadastrarVeiculo");
